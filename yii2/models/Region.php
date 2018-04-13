@@ -44,6 +44,7 @@ class Region extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['name_ru', 'name_uk'], 'required'],
             [['status', 'created_at', 'updated_at'], 'integer'],
             [['name_ru', 'name_uk'], 'string', 'max' => 100],
             [['url'], 'string', 'max' => 50],
